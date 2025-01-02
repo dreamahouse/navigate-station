@@ -4,9 +4,9 @@ const CardContainer = ({ children }) => {
     return (
         <Box _hover={{
             transform: "scale(1.03)",
-            transtion: "transform .15s ease-in",
+            transition: "transform .15s ease-in",
         }}
-            borderRadius={10}
+            borderRadius={16}
             overflow={"hidden"}
         >
             {children}

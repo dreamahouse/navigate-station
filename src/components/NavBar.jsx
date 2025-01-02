@@ -9,7 +9,7 @@ const NavBar = () => {
     // const { toggleColorMode, colorMode } = useColorMode()
 
     return (
-        <HStack padding={10} display="flex" w="100vw" justifyContent="space-between">
+        <HStack padding="5px" display="flex" w="100vw" justifyContent="space-between">
             <Link to="/">
                 <Image src={logo} boxSize="100px" objectFit={"cover"} />
             </Link>
