@@ -19,7 +19,7 @@ const HomePage = () => {
                     <SideBar />
                 </GridItem>
             </Show>
-            <GridItem area={"main"} bg="#f7f8fb" h="100vh">
+            <GridItem area={"main"} h="100vh">
                 <Header />
                 <CardList />
             </GridItem>

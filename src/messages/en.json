@@ -1,0 +1,7 @@
+{
+  "ErrorPage": {
+    "warning": "Oops",
+    "exist": "This page does not exist",
+    "error": "Unexpected error occurred"
+  }
+}

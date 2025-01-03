@@ -1,15 +1,17 @@
 import { Button, List, ListItem } from "@chakra-ui/react";
+import { nanoid } from "nanoid";
+import { useState } from "react";
 import { BsColumnsGap, BsCommand, BsJournalBookmark } from "react-icons/bs";
 import { FaFigma } from "react-icons/fa";
-import { IoMdAlbums, IoMdBulb, IoMdColorPalette } from "react-icons/io";
-import { nanoid } from "nanoid";
-import styles from "../style/sidebar.module.scss"
-import { useState } from "react";
+import { IoColorPaletteOutline } from "react-icons/io5";
+import { MdOutlineLightbulb } from "react-icons/md";
+import { RiFoldersLine } from "react-icons/ri";
+import styles from "../style/sidebar.module.scss";
 const iconMap = {
-    "IoMdBulb": <IoMdBulb />,
-    "IoMdColorPalette": <IoMdColorPalette />,
+    "MdOutlineLightbulb": <MdOutlineLightbulb />,
+    "IoColorPaletteOutline": <IoColorPaletteOutline />,
     "BsColumnsGap": <BsColumnsGap />,
-    "IoMdAlbums": <IoMdAlbums />,
+    "RiFoldersLine": <RiFoldersLine />,
     "BsCommand": <BsCommand />,
     "BsJournalBookmark": <BsJournalBookmark />,
     "FaFigma": <FaFigma />,
@@ -19,12 +21,12 @@ const data = [
     {
         id: nanoid(),
         name: '色彩搭配',
-        icon: "IoMdBulb",
+        icon: "MdOutlineLightbulb",
     },
     {
         id: nanoid(),
         name: '灵感参考',
-        icon: "IoMdColorPalette",
+        icon: "IoColorPaletteOutline",
     },
     {
         id: nanoid(),
@@ -34,7 +36,7 @@ const data = [
     {
         id: nanoid(),
         name: '素材资源',
-        icon: "IoMdAlbums",
+        icon: "RiFoldersLine",
     },
     {
         id: nanoid(),
@@ -66,6 +68,8 @@ const SideBar = () => {
                         h="48px"
                         my="8px"
                         borderRadius="12px"
+                        fontWeight={"400"}
+                        fontSize={"16px"}
                         leftIcon={iconMap[item.icon]}
                     >
                         {item.name}

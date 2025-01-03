@@ -6,9 +6,13 @@
         color: #fff;
         border: none;
     }
+    &:focus {
+        outline: 0 !important;
+    }
 }
 .active {
-    background: #1b1e27;
-    color: #fff;
-    border: none;
+    background: #1b1e27 !important;
+    color: #fff !important;
+    border: none !important;
+    outline: none !important;
 }

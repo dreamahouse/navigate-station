@@ -6,8 +6,6 @@ import head3 from "../assets/images/head3.png"
 import logo from "../assets/images/logo.png"
 import ImageHead from "./ImageHead"
 const NavBar = () => {
-    // const { toggleColorMode, colorMode } = useColorMode()
-
     return (
         <HStack padding="5px" display="flex" w="100vw" justifyContent="space-between">
             <Link to="/">
