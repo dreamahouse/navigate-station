@@ -1,4 +1,4 @@
-import { useColorModeValue, Card, CardBody, Heading, Image, Stack, Text, Link } from "@chakra-ui/react";
+import { Card, CardBody, Image, Link, Stack, Text, useColorModeValue } from "@chakra-ui/react";
 import { PiShareFat } from "react-icons/pi";
 const CardGrid = ({ listItem }) => {
     const bg = useColorModeValue("#ffffff", "#161B26")
@@ -16,21 +16,37 @@ const CardGrid = ({ listItem }) => {
 
     return (
         <Card bg={bg} border={`1px solid ${bc}`} borderRadius={"16px"}>
-            <CardBody>
+            <CardBody padding={"12px 16px 16px"}>
                 <Image
                     src={listItem.background_url}
                     alt={listItem.description}
-                    border="1px dotted #000"
                     objectFit="cover"
-                    borderRadius={"16px"}
+                    borderRadius={"8px"}
                     fallback={<Text>图片加载中...</Text>}
                 />
                 <Stack mt="6" spacing="3">
-                    <Heading fontSize={"15px"} fontWeight={"400"}>
+                    <Text
+                        noOfLines={2}
+                        fontSize={"14px"}
+                        title={listItem.description}
+                    >
                         {listItem.description}
-                    </Heading>
-                    <Link fontSize={"15px"} fontWeight={"400"} href={listItem.link} isExternal display="flex" justifyContent="space-between" alignItems="center">
-                        {listItem.link}<PiShareFat />
+                    </Text>
+                    <Link
+                        fontSize={"14px"}
+                        fontWeight={"400"}
+                        title={listItem.link}
+                        overflow="hidden"
+                        whiteSpace={"nowrap"}
+                        textOverflow={"ellipsis"}
+                        href={listItem.link}
+                        isExternal
+                        display="flex"
+                        justifyContent="space-between"
+                        alignItems="center"
+                    >
+                        {listItem.link}
+                        <PiShareFat />
                     </Link>
                 </Stack>
             </CardBody>

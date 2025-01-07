@@ -1,11 +1,11 @@
 .btn {
-    background: #f8f9fc;
-    color: #1b1e27;
+    background: transparent !important;
+    color: #1b1e27 !important;
     outline: 0 !important;
     border: 0 !important;
     &:hover {
-        background: #1b1e27 !important;
-        color: #fff;
+        background: #f8f9fc !important;
+        color: #1b1e27 !important;
         border: 0 !important;
         outline: 0 !important;
     }
@@ -20,7 +20,7 @@
     border: 0 !important;
     &:hover {
         background: #252631 !important;
-        color: #fff;
+        color: #fff !important;
         border: 0 !important;
         outline: 0 !important;
     }
@@ -33,10 +33,22 @@
     color: #fff !important;
     border: 0 !important;
     outline: 0 !important;
+    &:hover {
+        background: #1b1e27 !important;
+        color: #fff !important;
+        border: 0 !important;
+        outline: 0 !important;
+    }
 }
 .activeBlack {
     background: #3f4055 !important;
     color: #dddde5 !important;
     border: 0 !important;
     outline: 0 !important;
+    &:hover {
+        background: #3f4055 !important;
+        color: #dddde5 !important;
+        border: 0 !important;
+        outline: 0 !important;
+    }
 }
