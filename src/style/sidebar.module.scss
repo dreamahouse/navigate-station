@@ -1,10 +1,28 @@
 .btn {
-    background-color: #f8f9fc;
+    background: #f8f9fc;
     color: #1b1e27;
+    outline: 0 !important;
+    border: 0 !important;
     &:hover {
         background: #1b1e27 !important;
         color: #fff;
-        border: none;
+        border: 0 !important;
+        outline: 0 !important;
+    }
+    &:focus {
+        outline: 0 !important;
+    }
+}
+.btnBlack {
+    background: transparent !important;
+    color: #dddde5;
+    outline: 0 !important;
+    border: 0 !important;
+    &:hover {
+        background: #252631 !important;
+        color: #fff;
+        border: 0 !important;
+        outline: 0 !important;
     }
     &:focus {
         outline: 0 !important;
@@ -13,6 +31,12 @@
 .active {
     background: #1b1e27 !important;
     color: #fff !important;
-    border: none !important;
-    outline: none !important;
+    border: 0 !important;
+    outline: 0 !important;
+}
+.activeBlack {
+    background: #3f4055 !important;
+    color: #dddde5 !important;
+    border: 0 !important;
+    outline: 0 !important;
 }

@@ -1,6 +1,8 @@
-import { Card, CardBody, Heading, Image, Stack, Text, Link } from "@chakra-ui/react";
+import { useColorModeValue, Card, CardBody, Heading, Image, Stack, Text, Link } from "@chakra-ui/react";
 import { PiShareFat } from "react-icons/pi";
 const CardGrid = ({ listItem }) => {
+    const bg = useColorModeValue("#ffffff", "#161B26")
+    const bc = useColorModeValue("#F1F3F9", "#1F242F")
 
     if (!listItem) {
         return (
@@ -13,7 +15,7 @@ const CardGrid = ({ listItem }) => {
     }
 
     return (
-        <Card border="1px solid #f1f3f9" borderRadius={"16px"}>
+        <Card bg={bg} border={`1px solid ${bc}`} borderRadius={"16px"}>
             <CardBody>
                 <Image
                     src={listItem.background_url}

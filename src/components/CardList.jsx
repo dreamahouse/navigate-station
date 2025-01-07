@@ -1,4 +1,4 @@
-import { SimpleGrid } from "@chakra-ui/react"
+import { SimpleGrid, useColorModeValue, Box } from "@chakra-ui/react"
 import mockjs from "mockjs"
 import bg1 from "../assets/images/bg1.png"
 import bg2 from "../assets/images/bg2.png"
@@ -42,15 +42,17 @@ const list = [
 ]
 
 const CardList = () => {
-
+    const bg = useColorModeValue("#F8F9FC", "#121319")
     return (
-        <SimpleGrid columns={{ sm: 1, md: 2, lg: 3, xl: 4 }} padding={4} spacing={6}>
-            {list.map((item) => (
-                <CardContainer key={item.id}>
-                    <NavigateCard listItem={item} />
-                </CardContainer>
-            ))}
-        </SimpleGrid>
+        <Box h="calc(100vh - 74px)" bg={bg}>
+            <SimpleGrid columns={{ sm: 1, md: 2, lg: 3, xl: 4 }} padding={4} spacing={6}>
+                {list.map((item) => (
+                    <CardContainer key={item.id}>
+                        <NavigateCard listItem={item} />
+                    </CardContainer>
+                ))}
+            </SimpleGrid>
+        </Box>
     )
 }
 export default CardList

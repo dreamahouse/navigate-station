@@ -1,67 +1,18 @@
-import { Button, List, ListItem } from "@chakra-ui/react";
-import { nanoid } from "nanoid";
+import { Button, List, ListItem, useColorMode } from "@chakra-ui/react";
 import { useState } from "react";
-import { BsColumnsGap, BsCommand, BsJournalBookmark } from "react-icons/bs";
-import { FaFigma } from "react-icons/fa";
-import { IoColorPaletteOutline } from "react-icons/io5";
-import { MdOutlineLightbulb } from "react-icons/md";
-import { RiFoldersLine } from "react-icons/ri";
+import { iconMap } from "../data/iconMap";
+import { data } from "../data/sidebar";
 import styles from "../style/sidebar.module.scss";
-const iconMap = {
-    "MdOutlineLightbulb": <MdOutlineLightbulb />,
-    "IoColorPaletteOutline": <IoColorPaletteOutline />,
-    "BsColumnsGap": <BsColumnsGap />,
-    "RiFoldersLine": <RiFoldersLine />,
-    "BsCommand": <BsCommand />,
-    "BsJournalBookmark": <BsJournalBookmark />,
-    "FaFigma": <FaFigma />,
-}
 
-const data = [
-    {
-        id: nanoid(),
-        name: '色彩搭配',
-        icon: "MdOutlineLightbulb",
-    },
-    {
-        id: nanoid(),
-        name: '灵感参考',
-        icon: "IoColorPaletteOutline",
-    },
-    {
-        id: nanoid(),
-        name: '排版美化',
-        icon: "BsColumnsGap",
-    },
-    {
-        id: nanoid(),
-        name: '素材资源',
-        icon: "RiFoldersLine",
-    },
-    {
-        id: nanoid(),
-        name: '图标设计',
-        icon: "BsCommand",
-    },
-    {
-        id: nanoid(),
-        name: '设计周刊',
-        icon: "BsJournalBookmark",
-    },
-    {
-        id: nanoid(),
-        name: 'Figma插件',
-        icon: "FaFigma",
-    },
-]
 const SideBar = () => {
+    const { colorMode } = useColorMode()
     const [clickItem, setClickItem] = useState("")
     return (
         <List>
             {data.map(item => (
                 <ListItem key={item.id}>
                     <Button onClick={() => setClickItem(item.id)}
-                        className={clickItem === item.id ? `${styles["btn"]} ${styles["active"]}` : styles.btn}
+                        className={clickItem === item.id ? colorMode === "light" ? `${styles["btn"]} ${styles["active"]}` : `${styles["btnBlack"]} ${styles["activeBlack"]}` : colorMode === "light" ? styles.btn : styles.btnBlack}
                         justifyContent="start"
                         px="38px"
                         w="170px"

@@ -8,6 +8,7 @@ const CardContainer = ({ children }) => {
         }}
             borderRadius={16}
             overflow={"hidden"}
+
         >
             {children}
         </Box>
