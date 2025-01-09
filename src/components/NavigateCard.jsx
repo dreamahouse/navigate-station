@@ -1,4 +1,4 @@
-import { Card, CardBody, Image, Link, Stack, Text, useColorModeValue } from "@chakra-ui/react";
+import { Card, CardBody, HStack, Image, Link, Stack, Text, useColorModeValue } from "@chakra-ui/react";
 import { PiShareFat } from "react-icons/pi";
 const CardGrid = ({ listItem }) => {
     const bg = useColorModeValue("#ffffff", "#161B26")
@@ -27,27 +27,28 @@ const CardGrid = ({ listItem }) => {
                 <Stack mt="6" spacing="3">
                     <Text
                         noOfLines={2}
+                        h="42px"
                         fontSize={"14px"}
                         title={listItem.description}
                     >
                         {listItem.description}
                     </Text>
-                    <Link
-                        fontSize={"14px"}
-                        fontWeight={"400"}
-                        title={listItem.link}
-                        overflow="hidden"
-                        whiteSpace={"nowrap"}
-                        textOverflow={"ellipsis"}
-                        href={listItem.link}
-                        isExternal
-                        display="flex"
-                        justifyContent="space-between"
-                        alignItems="center"
-                    >
-                        {listItem.link}
+                    <HStack >
+                        <Link
+                            fontSize={"14px"}
+                            fontWeight={"400"}
+                            title={listItem.link}
+                            overflow="hidden"
+                            whiteSpace={"nowrap"}
+                            textOverflow={"ellipsis"}
+                            href={listItem.link}
+                            isExternal
+                            target="_blank"
+                        >
+                            {listItem.link}
+                        </Link>
                         <PiShareFat />
-                    </Link>
+                    </HStack>
                 </Stack>
             </CardBody>
         </Card>

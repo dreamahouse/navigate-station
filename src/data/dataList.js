@@ -15,6 +15,11 @@ import typesettingBg4 from "../assets/images/typesettingBg4.png";
 import materialList1 from "../assets/images/materialList1.png";
 import materialList2 from "../assets/images/materialList2.png";
 import materialList3 from "../assets/images/materialList3.png";
+import iconDesignList1 from "../assets/images/iconDesignList1.png";
+import iconDesignList2 from "../assets/images/iconDesignList2.png";
+import iconDesignList3 from "../assets/images/iconDesignList3.png";
+import iconDesignList4 from "../assets/images/iconDesignList4.png";
+import iconDesignList5 from "../assets/images/iconDesignList5.png";
 const dataList = {
   inspirationList: [
     {
@@ -137,9 +142,37 @@ const dataList = {
   iconDesignList: [
     {
       id: Random.id(),
-      background_url: colorBg4,
-      description: "",
-      link: "",
+      background_url: iconDesignList1,
+      description:
+        "感谢remixicon，应该是我使用最多的icon站了，同时推荐他们的「元气睡眠」主站就有入口",
+      link: "https://remixicon.com/",
+    },
+    {
+      id: Random.id(),
+      background_url: iconDesignList2,
+      description: "Yesicon 主打的就是一个量大管饱，你能想到想不到的这里都有",
+      link: "https://yesicon.app/",
+    },
+    {
+      id: Random.id(),
+      background_url: iconDesignList3,
+      description:
+        "一个开源图标库，提供1000+图标，同时提供几个官方包，让设计师和开发者更容易将图标融入项目中",
+      link: "https://lucide.dev/icons/",
+    },
+    {
+      id: Random.id(),
+      background_url: iconDesignList4,
+      description:
+        "一个包含1600+图标的开源图标库，支持React、React Native、Flutter、Vue、Figma和Framer。",
+      link: "https://iconoir.com/",
+    },
+    {
+      id: Random.id(),
+      background_url: iconDesignList5,
+      description:
+        "viggo 专为 Mac 和 iPhone 设计的暗黑主题，在你的 Mac 和iPhone上体验正真的暗黑模式",
+      link: "https://darkosicon.com/zh/",
     },
   ],
   designList: [
