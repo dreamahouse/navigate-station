@@ -4,4 +4,7 @@ import { defineConfig } from "vite";
 export default defineConfig({
   plugins: [react()],
   base: "/navigate-station/",
+  build: {
+    outDir: "docs", // 将构建输出目录改为 docs
+  },
 });
