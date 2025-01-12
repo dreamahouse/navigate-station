@@ -1,5 +1,6 @@
 {
   "name": "navigate-station",
+  "homepage": "https://dreamahouse.github.io/navigate-station/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -7,12 +8,15 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@chakra-ui/icons": "^2.2.4",
     "@chakra-ui/react": "^2.8.2",
     "axios": "^1.7.2",
+    "gh-pages": "^6.3.0",
     "mockjs": "^1.1.0",
     "nanoid": "^5.0.9",
     "next-intl": "^3.17.3",
