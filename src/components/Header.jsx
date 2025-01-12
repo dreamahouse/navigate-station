@@ -3,8 +3,6 @@ import { FaGithub } from "react-icons/fa";
 import { FiSun, FiMoon } from "react-icons/fi";
 import { HiMiniLanguage } from "react-icons/hi2";
 import HeadIconContainer from "./HeadIconContainer";
-import MyLightThemeIcon from "./icon/MyLightThemeIcon";
-import MyGithubIcon from "./icon/MyGithubIcon";
 import MyDarkThemeIcon from "./icon/MyDarkThemeIcon";
 const Header = () => {
     const { colorMode, toggleColorMode } = useColorMode()
