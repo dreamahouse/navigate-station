@@ -30,7 +30,7 @@ const HomePage = () => {
             </Show> */}
             <Show above="lg">
                 <GridItem area={"aside"} paddingX={6} border={`1px solid ${borderColor}`} bg={bg}>
-                    <Box my="32px">
+                    <Box my="32px" ml="12px">
                         <MyLogoIcon />
                     </Box>
                     <SideBar />
