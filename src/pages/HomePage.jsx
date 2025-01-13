@@ -1,8 +1,8 @@
-import { Grid, GridItem, Image, Show, useColorModeValue } from "@chakra-ui/react"
-import logo from "../assets/images/logo.png"
+import { Box, Grid, GridItem, Show, useColorModeValue } from "@chakra-ui/react"
 import CardList from "../components/CardList"
 import Header from "../components/Header"
 import SideBar from "../components/SideBar"
+import MyLogoIcon from "../components/icon/MyLogoIcon"
 const HomePage = () => {
     const borderColor = useColorModeValue("#F7F7F7", "#252631")
     const bg = useColorModeValue("#ffffff", "#111116")
@@ -30,7 +30,9 @@ const HomePage = () => {
             </Show> */}
             <Show above="lg">
                 <GridItem area={"aside"} paddingX={6} border={`1px solid ${borderColor}`} bg={bg}>
-                    <Image src={logo} w="144px" h="64px" ml="10px" my="32px" />
+                    <Box my="32px">
+                        <MyLogoIcon />
+                    </Box>
                     <SideBar />
                 </GridItem>
             </Show>
